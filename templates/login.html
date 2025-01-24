@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body{
+        background-image: url("static/images/wallpaper3.webp");
+        background-repeat: no-repeat;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+
+    .container {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        }
+
+    h2 { margin-top: 0;}
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: rgba(64, 64, 64, 0.5);
+        border: 1px solid #ccc;}
+
+    .form {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px; }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: red;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; }
+
+    button:hover {
+    background-color: rgb(230, 10, 10);
+    }
+
+    .register-link {
+        margin-top: 10px;
+    }
+
+    .register-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+</style>
+<script src="{{url_for('static',filename='js/login.js')}}" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <form id="signInForm" class="form">
+        <h2 style="color: white;">Sign In</h2>
+        <input type="email" id="email" placeholder="Email" style="color: white;" required>
+        <input type="password" id="password" placeholder="Password" style="color: white;" required>
+        <button type="submit">Sign In</button>
+        <p class="register-link" style="color: white;">Don't have an account? <a href="#" id="registerLink">
+            Register</a></p>
+    </form>
+    <form id="signUpForm" class="form">
+        <h2 style="color: white;">Sign Up</h2>
+        <input type="email" id="signupEmail" placeholder="Email" style="color: white;" required>
+        <input type="password" id="signupPassword" placeholder="Password" style="color: white;" required>
+        <button type="submit" style="color: white;">Sign Up</button>
+        <p class="register-link" style="color: white;">Already have an account? <a href="#" id="signInLink">
+            Sign In</a></p>
+    </form>
+</div>
+</body>
+</html>

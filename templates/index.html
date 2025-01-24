@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+    <style>
+.hh1{
+  background: linear-gradient(180deg ,red ,rgb(237, 27, 27),rgb(33, 31, 31));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-style: oblique;
+
+  font-family:'Roboto',sans-serif ;
+}
+        
+
+body{
+    background-image: url("static/images/wallpaper3.webp");
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+
+}
+
+input{
+    background-color: rgba(64, 64, 64, 0.8);
+    color:white;
+}
+
+.body_div{
+  margin-bottom: 10px;
+   text-align: center;
+   background-color: rgba(0, 0, 0, 0.5);
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}
+        
+
+#suggestion-list {
+    padding: 0;
+    margin: 0;
+    border: 1px solid  rgb(103, 101, 101);
+    max-height: 100px;
+    overflow-y: auto;
+    color: rgb(103, 101, 101);
+}
+
+#suggestion-list li {
+    padding: 10px;
+    cursor: pointer;
+    color:white;
+}
+ .reviews,.movies p{
+  font-family:Georgia, 'Times New Roman', Times, serif;  
+
+  margin: 20px;
+
+    color: white;
+}
+
+
+    </style>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <script src="{{url_for('static',filename='js/main.js')}}" defer></script>
+
+
+</head>
+    <body>
+        <div class="container">
+    
+          <div class="body_div">
+                <h1 class="hh1">Movie Recommendation System</h1>
+            
+                <div class="input_div">
+                    <input type="text" id="movieInput" placeholder="Enter Movie name" oninput="suggestMovies()">
+                    <ul id="suggestion-list"></ul>
+                </div>
+            
+                <div class="buttondiv"><button onclick="recommendMovie()" class="Recommend_button">Recommend</button></div>
+                <div id ='movies' class="movies"></div>
+
+                <div class="input_div">
+                    <input type="text" id="input_review" placeholder="Enter review">
+                </div>
+
+                <div class="buttondiv"><button onclick="getSentiment()" class="Recommend_button">Get Sentiment</button></div>
+                <div id="review" class="reviews"></div>
+  
+
+                </div>
+        </div>
+    
+  
+</body>
+</html>
