@@ -1,0 +1,11 @@
+streamlit
+scikit-learn
+nltk
+pandas
+tmdbv3api
+requests
+seaborn
+beautifulsoup4
+
+
+flask-pymysql
